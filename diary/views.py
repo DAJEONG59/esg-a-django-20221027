@@ -35,6 +35,6 @@ def diary_post_new(request):
 
 
     
-    return render(request, "blog/r_postform.html",{
+    return render(request, "diary/d_postform.html",{
         "form":form,
     })

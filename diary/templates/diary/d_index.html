@@ -11,12 +11,15 @@
 
     {% for dairy in dairy_list %}
         <h2>
-         <a href ="{{ diary.get_absolute_url }}"> # 장고 html에서는 ()로 함수 호출 불가
+         <a href ="{{ diary.get_absolute_url }}"> 
             {{ dairy.title }}
          </a>
+
         </h2>
-        <h4>{{ dairy.created_at }}</h4>
+        <h4>등록 일시{{ dairy.created_at }}</h4>
+        <h5>수정 일시{{ dairy.updated_at }}</h5>
         <p>{{ dairy.message }}</p>
+
     {% endfor %}
 
     <hr/>

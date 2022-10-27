@@ -11,5 +11,5 @@ class Memory(models.Model):
     def get_absolute_url(self): #인자없는 함수, get_absolute_url은 장고에서 정해진 함수
         return f"/diary/{self.pk}/"
     def __str__(self):
-        return f"[{self.pk}] {self.title} "
+        return f"[{self.pk}] {self.title}"
 
