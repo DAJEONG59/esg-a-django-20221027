@@ -9,21 +9,23 @@
 <body>
     <h1>Diary</h1>
 
-    {% for dairy in dairy_list %}
+    {% for diary in diarypost_list %}
         <h2>
          <a href ="{{ diary.get_absolute_url }}"> 
-            {{ dairy.title }}
+            {{ diary.title }}
          </a>
 
         </h2>
-        <h4>등록 일시{{ dairy.created_at }}</h4>
-        <h5>수정 일시{{ dairy.updated_at }}</h5>
-        <p>{{ dairy.message }}</p>
+        <h4>등록 일시{{ diary.created_at }}</h4>
+        <h5>수정 일시{{ diary.updated_at }}</h5>
+        <p>{{ diary.message }}</p>
 
     {% endfor %}
 
     <hr/>
 
     <a href="/diary/new/">오늘의 일기 쓰기 </a>
+    
+    
 </body>
 </html>
